@@ -11,6 +11,8 @@ This is a boilerplate for creating microservices using Node.js, TypeScript, and 
 
 ## Project Structure
 
+```shell
+.
 ├── .github
 ├── .k8s
 ├── prisma
@@ -36,6 +38,7 @@ This is a boilerplate for creating microservices using Node.js, TypeScript, and 
 ├── package.json
 ├── index.ts
 └── pnpm-lock.yaml
+```
 
 ## Features
 
