@@ -92,16 +92,15 @@ cp .env.example .env
 7. **Start the server:**
 
 ```sh
-pnpm dev
+pnpm start:dev
 ```
 
 ## Available Scripts
 
-- **pnpm dev**: Starts the server in development mode.
+- **pnpm clean**: Clean the build folder.
 - **pnpm build**: Compiles the TypeScript project to JavaScript.
-- **pnpm start**: Starts the server using the compiled code.
-- **pnpm lint**: Runs ESLint for code verification.
-- **pnpm format**: Formats the code using Prettier.
+- **pnpm start:dev**: Starts the server in development mode.
+- **pnpm start:prod**: Starts the server using the compiled code.
 
 ## Contributing
 
