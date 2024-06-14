@@ -1,0 +1,43 @@
+{
+  "name": "node-ms-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./ -o ./dist",
+    "start:dev": "cross-env NODE_ENV=development && ts-node-dev -r tsconfig-paths/register --exit-child --respawn --ignore-watch node_modules --no-notify index.ts",
+    "start:prod": "cross-env NODE_ENV=production && ts-node -r tsconfig-paths/register ./dist/index.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@iorder/iorder-query-builder": "^1.0.0",
+    "@prisma/client": "^5.15.0",
+    "amqplib": "^0.10.4",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "fastify-plugin": "^4.5.1",
+    "uuid": "^10.0.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "@types/amqplib": "^0.10.5",
+    "@types/node": "^20.14.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.4.0",
+    "globals": "^15.4.0",
+    "prettier": "^3.3.2",
+    "prisma": "^5.15.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tscpaths": "^0.0.9",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.13.0"
+  },
+  "packageManager": "pnpm@8.6.2"
+}
